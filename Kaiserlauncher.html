@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KaiserLauncher — Minecraft Eaglercraft Launcher</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', monospace;
+      background: repeating-linear-gradient(
+        45deg,
+        #2d2d2d,
+        #2d2d2d 10px,
+        #262626 10px,
+        #262626 20px
+      );
+      color: #ffffff;
+      line-height: 1.8;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      padding: 120px 20px;
+      text-align: center;
+      background: linear-gradient(180deg, #3a7d44, #1e3c22);
+      box-shadow: inset 0 -10px 0 rgba(0,0,0,0.4);
+      animation: slideDown 1s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 4px 4px #000;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 18px 42px;
+      background: linear-gradient(#7fdc6f, #3fa34d);
+      color: #000;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 6px #1f5f2a;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(3px);
+      box-shadow: 0 3px #1f5f2a;
+    }
+
+    section {
+      padding: 90px 20px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeUp 1s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+      text-shadow: 3px 3px #000;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #3b3b3b;
+      padding: 30px;
+      border: 4px solid #1c1c1c;
+      box-shadow: inset 0 0 0 4px #5a5a5a;
+      animation: popIn 0.8s ease both;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      background: #1a1a1a;
+      font-size: 0.7rem;
+      border-top: 6px solid #000;
+    }
+
+    .warning {
+      background: #5a1f1f;
+      padding: 25px;
+      border: 4px solid #2b0f0f;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>KaiserLauncher</h1>
+  <p>The Ultimate Eaglercraft-Based Minecraft Launcher</p>
+  <a class="btn" href="KaiserLauncher.py" download>Download KaiserLauncher</a>
+</header>
+
+<section>
+  <h2>What is KaiserLauncher?</h2>
+  <p>
+    KaiserLauncher is a custom-built launcher for <strong>Minecraft</strong>
+    designed specifically around <strong>Eaglercraft</strong> technology.
+    It allows players to launch, manage, and customize their browser-based
+    Minecraft experience from a single powerful interface.
+  </p>
+  <p>
+    Built for speed, flexibility, and control, KaiserLauncher removes the need
+    for bloated launchers and focuses purely on what matters — playing Minecraft
+    anywhere, anytime.
+  </p>
+</section>
+
+<section>
+  <h2>Core Features</h2>
+  <div class="features">
+    <div class="card">
+      <h3>🧱 Eaglercraft Powered</h3>
+      <p>Runs entirely on Eaglercraft, enabling Minecraft gameplay in restricted or browser-only environments.</p>
+    </div>
+    <div class="card">
+      <h3>🚀 One-Click Launch</h3>
+      <p>Launch your Minecraft session instantly with optimized startup logic.</p>
+    </div>
+    <div class="card">
+      <h3>🌐 Server Manager</h3>
+      <p>Save, organize, and instantly connect to your favorite Eaglercraft servers.</p>
+    </div>
+    <div class="card">
+      <h3>🎮 Profile System</h3>
+      <p>Manage usernames, versions, and settings with multiple player profiles.</p>
+    </div>
+    <div class="card">
+      <h3>⚙️ Lightweight</h3>
+      <p>Minimal resource usage — perfect for low-end or school computers.</p>
+    </div>
+    <div class="card">
+      <h3>🔒 Privacy Friendly</h3>
+      <p>No telemetry, no tracking, no accounts required.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Why KaiserLauncher Exists</h2>
+  <p>
+    Many players rely on Eaglercraft to play Minecraft in environments where
+    traditional launchers are blocked. KaiserLauncher was created to provide a
+    clean, reliable, and powerful way to manage that experience without relying
+    on random websites or unstable tools.
+  </p>
+</section>
+
+<section>
+  <h2>Development Timeline</h2>
+  <div class="timeline">
+    <div>
+      <h3>Phase 1 — Concept</h3>
+      <p>Idea formed: a dedicated launcher for Eaglercraft players.</p>
+    </div>
+    <div>
+      <h3>Phase 2 — Core Engine</h3>
+      <p>Launcher logic, UI flow, and Eaglercraft integration built.</p>
+    </div>
+    <div>
+      <h3>Phase 3 — Optimization</h3>
+      <p>Performance tuning and usability improvements.</p>
+    </div>
+    <div>
+      <h3>Phase 4 — Public Release</h3>
+      <p>KaiserLauncher released for public use.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Legal & Disclaimer</h2>
+  <div class="warning">
+    <p>
+      KaiserLauncher is an independent, unofficial project and is not affiliated
+      with Mojang Studios or Microsoft. Minecraft is a trademark of Mojang
+      Studios. Eaglercraft is a community-driven project.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 KaiserLauncher Project</p>
+  <p>Made with ❤️ by <strong>Alex</strong></p>
+  <p>Built for the Minecraft community.</p>
+</footer>
+
+</body>
+</html>
