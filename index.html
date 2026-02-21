@@ -22,10 +22,7 @@
       animation: fadeIn 1.2s ease-in;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
     header {
       padding: 120px 20px;
@@ -35,21 +32,11 @@
       animation: slideDown 1s ease-out;
     }
 
-    @keyframes slideDown {
-      from { transform: translateY(-40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+    @keyframes slideDown { from { transform: translateY(-40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-    header h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      text-shadow: 4px 4px #000;
-    }
+    header h1 { font-size: 3.5rem; margin-bottom: 20px; text-shadow: 4px 4px #000; }
 
-    header p {
-      font-size: 1rem;
-      opacity: 0.95;
-    }
+    header p { font-size: 1rem; opacity: 0.95; }
 
     .btn {
       display: inline-block;
@@ -77,16 +64,9 @@
       animation: fadeUp 1s ease both;
     }
 
-    @keyframes fadeUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+    @keyframes fadeUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-    section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 30px;
-      text-shadow: 3px 3px #000;
-    }
+    section h2 { font-size: 1.6rem; margin-bottom: 30px; text-shadow: 3px 3px #000; }
 
     .features {
       display: grid;
@@ -102,10 +82,7 @@
       animation: popIn 0.8s ease both;
     }
 
-    @keyframes popIn {
-      from { transform: scale(0.9); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+    @keyframes popIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
     footer {
       text-align: center;
@@ -124,10 +101,14 @@
 </head>
 <body>
 
+<!-- ===== Sounds ===== -->
+<audio id="hoverSound" src="https://freesound.org/data/previews/341/341695_62489-lq.mp3"></audio>
+<audio id="clickSound" src="https://freesound.org/data/previews/341/341695_62489-lq.mp3"></audio>
+
 <header>
   <h1>KaiserLauncher</h1>
   <p>The Ultimate Eaglercraft-Based Minecraft Launcher</p>
-  <a class="btn" href="KaiserLauncher.py" download>Download KaiserLauncher</a>
+  <a class="btn" href="KaiserLauncher.exe" download id="downloadBtn">Download KaiserLauncher</a>
 </header>
 
 <section>
@@ -223,6 +204,32 @@
   <p>Made with ❤️ by <strong>Alex</strong></p>
   <p>Built for the Minecraft community.</p>
 </footer>
+
+<script>
+  const hoverSound = document.getElementById('hoverSound');
+  const clickSound = document.getElementById('clickSound');
+  const downloadBtn = document.getElementById('downloadBtn');
+
+  // Enable sounds after first user click
+  function enableSounds() {
+    document.querySelectorAll('.btn, .card').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+      });
+    });
+
+    downloadBtn.addEventListener('click', () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+
+    // Remove this listener after enabling
+    window.removeEventListener('click', enableSounds);
+  }
+
+  window.addEventListener('click', enableSounds);
+</script>
 
 </body>
 </html>
